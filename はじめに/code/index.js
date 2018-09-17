@@ -38,5 +38,26 @@ var tutorial = function(){
             }
         }
     });
+    var app6 = new Vue({
+        el: '#app6',
+        data: {
+            message: 'Hello Vue.js!'
+        }
+    })
+
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
+    })
+    var app7 = new Vue({
+        el: '#app7',
+        data: {
+            groceryList: [
+                { id: 0, text: 'Vegetables' },
+                { id: 1, text: 'Cheese' },
+                { id: 2, text: 'Whatever else humans are supposed to eat' }
+            ]
+        }
+    })
 }
 window.onload = tutorial;

@@ -28,3 +28,14 @@
     <p>{{ message }}</p>
     <button v-on:click="reverseMessage">Reverse Message</button>
 </div>
+
+<div id="app6">
+    <p>{{message}}</p>
+    <input v-model="message">
+</div>
+
+<div id="app7">
+    <ol>
+        <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+    </ol>
+</div>
