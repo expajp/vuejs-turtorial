@@ -1,0 +1,11 @@
+<script type="text/javascript" src='index.js'></script>
+
+<script src='vue.js'></script>
+<span id="vm01">{{ bold }}</span>
+<span id="vm02" v-html="bold"></span>
+
+<div id="vm03" v-bind:style="styleSheet">Sample</div>
+
+<button id="vm04" v-bind:disabled="isButtonDisabled">Push</button>
+
+<p id="vm05">{{ now.getFullYear() }}</span>
