@@ -15,5 +15,12 @@ var tutorial = function(){
             }
         }
     })
+    var vm02 = new  Vue({
+        el: '#vm02',
+        data: {
+            isRed: false,
+            bigClass: 'big'
+        }
+    })
 }
 window.onload = tutorial;
