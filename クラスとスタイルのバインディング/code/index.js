@@ -22,5 +22,19 @@ var tutorial = function(){
             bigClass: 'big'
         }
     })
+    var vm03 = new Vue({
+        el: '#vm03',
+        data: {
+            redStyle: {
+                color: 'red'
+            },
+            bigStyle: {
+                fontSize: '32pt'
+            },
+            italicStyle: {
+                fontStyle: 'italic'
+            }
+        }
+    })
 }
 window.onload = tutorial;
