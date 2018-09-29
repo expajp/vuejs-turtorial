@@ -1,0 +1,12 @@
+<script type="text/javascript" src='index.js'></script>
+
+<script src='vue.js'></script>
+
+<h1 v-if="ok" id="vm01">Yes</h1>
+<h1 v-else>No</h1>
+
+<template id="vm02" v-if="ok">
+    <h1>Title</h1>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+</template>
