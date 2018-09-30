@@ -2,11 +2,19 @@
 
 <script src='vue.js'></script>
 
-<h1 v-if="ok" id="vm01">Yes</h1>
-<h1 v-else>No</h1>
+<div id="vm01">
+    <h1 v-if="ok">Yes</h1>
+    <h1 v-else>No</h1>
+</div>
 
-<template id="vm02" v-if="ok">
-    <h1>Title</h1>
-    <p>Paragraph 1</p>
-    <p>Paragraph 2</p>
-</template>
+<div id="vm02">
+    <template v-if="ok">
+        <h1>Title</h1>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+    </template>
+</div>
+
+<div id="vm03">
+    <h1 v-show="show">Show</h1>
+</div>
