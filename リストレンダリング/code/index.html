@@ -1,0 +1,9 @@
+<script type="text/javascript" src='index.js'></script>
+
+<script src='vue.js'></script>
+
+<ul id="vm01">
+    <li v-for="(item, index) in items">
+        {{ parentMessage }} - {{ index }}. {{ item.message }}
+    </li>
+</ul>
