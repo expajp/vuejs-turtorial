@@ -7,3 +7,9 @@
         {{ parentMessage }} - {{ index }}. {{ item.message }}
     </li>
 </ul>
+
+<ul id="vm02">
+    <li v-for="(value, key, index) in object">
+        {{ index }}. {{ key }} - {{ value }} - {{parentMessage}}
+    </li>
+</ul>

@@ -9,5 +9,21 @@ var tutorial = function(){
             ]
         }
     })
+    var vm02 = new Vue({
+        el: '#vm02',
+        data: {
+            parentMessage: 'hoge',
+            object: {
+                firstName: 'John', 
+                lastName: 'Lennon',
+                age: 30
+            }
+        }
+    })
+    var vm03 = new Vue({
+        el: '#vm03',
+        data: {
+        }
+    })
 }
 window.onload = tutorial;
