@@ -20,10 +20,5 @@ var tutorial = function(){
             }
         }
     })
-    var vm03 = new Vue({
-        el: '#vm03',
-        data: {
-        }
-    })
 }
 window.onload = tutorial;
