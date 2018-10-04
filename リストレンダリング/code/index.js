@@ -20,5 +20,31 @@ var tutorial = function(){
             }
         }
     })
+    var vm03 = new Vue({
+        el: '#vm03',
+        data: {
+            numbers: [1, 2, 3, 4, 5, 6, 7]
+        },
+        computed: {
+            evenNumbers: function(){
+                return this.numbers.filter(function(number){
+                    return number % 2 == 0
+                })
+            }
+        }
+    })
+    var vm04 = new Vue({
+        el: '#vm04',
+        data: {
+            numbers: [1, 2, 3, 4, 5, 6, 7].reverse()
+        },
+        methods: {
+            even: function(numbers){
+                return numbers.filter(function(number){
+                    return number % 2 == 0
+                })
+            }
+        }
+    })
 }
 window.onload = tutorial;

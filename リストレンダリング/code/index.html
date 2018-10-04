@@ -13,3 +13,11 @@
         {{ index }}. {{ key }} - {{ value }} - {{parentMessage}}
     </li>
 </ul>
+
+<ul id="vm03">
+    <li v-for="n in evenNumbers">{{ n }}</li>
+</ul>
+
+<ul id="vm04">
+    <li v-for="n in even(numbers)">{{ n }}</li>
+</ul>
