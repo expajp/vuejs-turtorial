@@ -46,5 +46,8 @@ var tutorial = function(){
             }
         }
     })
+    var vm05 = new Vue({
+        el: '#vm05'
+    })
 }
 window.onload = tutorial;
