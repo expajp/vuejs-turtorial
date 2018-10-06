@@ -49,5 +49,35 @@ var tutorial = function(){
     var vm05 = new Vue({
         el: '#vm05'
     })
+    var vm06 = new Vue({
+        el: '#vm06',
+        data: { 
+            items: [
+                { message: 'Foo' },
+                { message: 'Bar' }
+            ]
+        }
+    })
+    var vm07 = new Vue({
+        el: '#vm07',
+        data: {
+            todos: [
+                { todo: 'Foo', isComplete: false },
+                { todo: 'Bar', isComplete: true },
+                { todo: 'Baz', isComplete: false }
+            ]
+        }
+    })
+    var vm08 = new Vue({
+        el: '#vm08',
+        data: {
+            visible: false,
+            todos: [
+                { todo: 'Foo', isComplete: false },
+                { todo: 'Bar', isComplete: false },
+                { todo: 'Baz', isComplete: false }
+            ]
+        }
+    })
 }
 window.onload = tutorial;
