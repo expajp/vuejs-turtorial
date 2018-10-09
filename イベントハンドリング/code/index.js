@@ -19,5 +19,13 @@ var tutorial = function(){
             }
         }
     })
+    var vm03 = new Vue({
+        el: '#vm03',
+        methods: {
+            say: function(message){
+                alert(message)
+            }
+        }
+    })
 }
 window.onload = tutorial;
