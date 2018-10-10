@@ -27,5 +27,13 @@ var tutorial = function(){
             }
         }
     })
+    var vm04 = new Vue({
+        el: '#vm04',
+        methods: {
+            submit: function(){
+                alert('hello')
+            }
+        }
+    })
 }
 window.onload = tutorial;
