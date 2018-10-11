@@ -1,0 +1,28 @@
+<script type="text/javascript" src='index.js'></script>
+
+<script src='vue.js'></script>
+
+<div id="vm01">
+    <input v-model="message">
+    <p>message: {{ message }}</p>
+</div>
+
+<div id="vm02">
+    <textarea v-model="message"></textarea>
+    <p style="white-space: pre-line;">{{ message }}</p>
+</div>
+
+<div id="vm03">
+    <input type="checkbox" v-model="checked" />
+    <label for="checkbox">{{ checked }}</label>
+</div>
+
+<div id="vm04">
+    <input type="checkbox" id="jack" value="Jack" v-model="checked">
+    <label for="jack">Jack</label>
+    <input type="checkbox" id="john" value="John" v-model="checked">
+    <label for="john">John</label>
+    <input type="checkbox" id="mike" value="Mike" v-model="checked">
+    <label for="mike">Mike</label>
+    <p>checked: {{ checked }}</p>
+</div>
