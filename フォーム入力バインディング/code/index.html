@@ -26,3 +26,25 @@
     <label for="mike">Mike</label>
     <p>checked: {{ checked }}</p>
 </div>
+
+<div id="vm05">
+    <input type="radio" value="one" v-model="picked" />
+    <label for="one">one</label>
+    <input type="radio" value="two" v-model="picked" />
+    <label for="two">two</label>
+    <p>picked: {{ picked }}</p>
+</div>
+
+<div id="vm06">
+    <select v-model="selected" multiple>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <br>
+    <span>Selected: {{ selected }}</span>
+</div>
+
+
+
+

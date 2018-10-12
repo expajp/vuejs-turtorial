@@ -23,5 +23,17 @@ var tutorial = function(){
             checked: []
         }
     })
+    var vm05 = new Vue({
+        el: '#vm05',
+        data: {
+            picked: ''
+        }
+    })
+    var vm06 = new Vue({
+        el: '#vm06',
+        data: {
+            selected: []
+        }
+    })
 }
 window.onload = tutorial;
