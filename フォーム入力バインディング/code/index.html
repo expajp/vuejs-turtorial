@@ -36,7 +36,7 @@
 </div>
 
 <div id="vm06">
-    <select v-model="selected" multiple>
+    <select v-model="selected" multiple="multiple" style="width: 50px;">
         <option>A</option>
         <option>B</option>
         <option>C</option>
@@ -45,6 +45,11 @@
     <span>Selected: {{ selected }}</span>
 </div>
 
-
-
-
+<div id="vm07">
+    <input type="checkbox" v-model="toggle" true-value="yes" false-value="no" v-bind:value="toggle" /> {{ toggle }} <br />
+    <input type="radio" name="radio" v-model="pick" v-bind:value="radio" /><label for="radio">{{ pick }}</label> <br />
+    <select v-model="selected">
+        <option v-bind:value="{ number: 123 }">123</option>
+    </select><br />
+    {{ selected }}
+</div>

@@ -35,5 +35,14 @@ var tutorial = function(){
             selected: []
         }
     })
+    var vm07 = new Vue({
+        el: '#vm07',
+        data: {
+            toggle: 'null',
+            pick: 'null',
+            radio: 'radio',
+            selected: { hoge: 'hoge' }
+        }
+    })
 }
 window.onload = tutorial;
