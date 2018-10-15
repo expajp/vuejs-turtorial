@@ -4,4 +4,10 @@
 
 <div id="vm01">
     <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
 </div>
+
+<div id="vm02">
+    <blog-post v-for="post in posts" :key="post.id" :title="post.title">    
+</div> 
