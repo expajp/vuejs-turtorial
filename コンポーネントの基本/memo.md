@@ -31,3 +31,44 @@
     * propsオプションに渡した名前のプロパティをコンポーネントが受け取ることができる
 * テンプレートのカスタム属性としてもデータを渡せる
     * これを利用して、**v-forでデータを順に受け渡して表示**ができる
+
+## 単一のルート要素
+* Vueは、すべてのコンポーネントに単一のルート要素を要求する
+    * つまり、**Vueコンポーネントとなれるのは、1つのルート要素とその子要素だけ**
+* そして、blog-postコンポーネントが含む情報が**タイトルだけなわけがない**
+    * ルート要素を単一に保ちつつたくさんの情報を入れようとすると、最終的にはこうなる
+
+```html
+<blog-post
+  v-for="post in posts"
+  v-bind:key="post.id"
+  v-bind:title="post.title"
+  v-bind:content="post.content"
+  v-bind:publishedAt="post.publishedAt"
+  v-bind:comments="post.comments"
+></blog-post>
+```
+
+* この状況は、**すべての情報を格納したオブジェクトを1つバインドする**ことで避けることができる
+
+```html
+<blog-post
+  v-for="post in posts"
+  v-bind:key="post.id"
+  v-bind:post="post"
+></blog-post>
+```
+```JavaScript
+Vue.component('blog-post', {
+  props: ['post'],
+  template: `
+    <div class="blog-post">
+      <h3>{{ post.title }}</h3>
+      <div v-html="post.content"></div>
+    </div>
+  `
+})
+```
+
+* JavaScriptのテンプレート文字列を使用しているので、IEを想定する場合はBabel必須
+
