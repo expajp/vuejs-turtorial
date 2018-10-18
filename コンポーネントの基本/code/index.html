@@ -11,3 +11,9 @@
 <div id="vm02">
     <blog-post v-for="post in posts" :key="post.id" :title="post.title">    
 </div> 
+
+<div id="vm03">
+    <div :style="{ fontSize: postFontSize + 'em' }">
+        <blog-post v-for="post in posts" :key="post.id" :title="post.title" v-on:enlarge-text="postFontSize += 0.1">    
+    </div>
+</div> 

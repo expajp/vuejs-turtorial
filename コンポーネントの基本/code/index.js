@@ -9,7 +9,7 @@ var tutorial = function(){
 
     Vue.component('blog-post', {
         props: ['title'],
-        template: '<h3>{{ title }}</h3>'
+        template: '<h3>{{ title }}</h3><button v-on:click="$emit("enlarge-text")">Enlarge text</button>'
     })
     var vm02 = new Vue({ 
         el: '#vm02', 
@@ -19,6 +19,17 @@ var tutorial = function(){
                 { id: 2, title: "Chamber Of Secrets" },
                 { id: 3, title: "Prizoner Of Azkaban" },
             ]
+        }
+    })
+    var vm03 = new Vue({ 
+        el: '#vm03', 
+        data: {
+            posts: [
+                { id: 1, title: "Philosopher's Stone" },
+                { id: 2, title: "Chamber Of Secrets" },
+                { id: 3, title: "Prizoner Of Azkaban" },
+            ],
+            postFontSize: 1
         }
     })
 }
