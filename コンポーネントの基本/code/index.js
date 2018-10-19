@@ -9,7 +9,14 @@ var tutorial = function(){
 
     Vue.component('blog-post', {
         props: ['title'],
-        template: '<h3>{{ title }}</h3><button v-on:click="$emit("enlarge-text")">Enlarge text</button>'
+        template: `
+        <div class="blog-post">
+            <h3>{{ title }}</h3>
+            <button v-on:click="$emit('enlarge-text', 0.5)">
+                Enlarge text
+            </button>
+        </div>
+        `
     })
     var vm02 = new Vue({ 
         el: '#vm02', 
@@ -25,11 +32,16 @@ var tutorial = function(){
         el: '#vm03', 
         data: {
             posts: [
-                { id: 1, title: "Philosopher's Stone" },
-                { id: 2, title: "Chamber Of Secrets" },
-                { id: 3, title: "Prizoner Of Azkaban" },
+                { id: 4, title: "Goblet Of Fire" },
+                { id: 5, title: "Order Of Phoenix" },
+                { id: 6, title: "Half-Blood Prince" },
             ],
             postFontSize: 1
+        },
+        methods: {
+            enlargeFontSize: function(val) {
+                this.postFontSize += val
+            }
         }
     })
 }
