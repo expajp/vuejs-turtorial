@@ -44,5 +44,20 @@ var tutorial = function(){
             }
         }
     })
+    Vue.component('custom-input', {
+        props: ['value'],
+        template: `
+            <input
+            v-bind:value="value"
+            v-on:input="$emit('input', $event.target.value)"
+        >
+        `
+    })
+    var vm04 = new Vue({
+        el: '#vm04',
+        data: {
+            searchText: 'hoge'
+        }
+    })
 }
 window.onload = tutorial;

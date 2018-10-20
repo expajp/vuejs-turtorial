@@ -17,3 +17,8 @@
         <blog-post v-for="post in posts" :key="post.id" :title="post.title" v-on:enlarge-text="enlargeFontSize">    
     </div>
 </div> 
+    
+<div id="vm04">
+    <custom-input v-model="searchText"></custom-input>
+    <p>searchText: {{ searchText }}</p>
+</div> 
