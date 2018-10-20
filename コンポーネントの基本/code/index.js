@@ -59,5 +59,16 @@ var tutorial = function(){
             searchText: 'hoge'
         }
     })
+    Vue.component('alert-box', {
+        template: `
+        <div class="demo-alert-box">
+            <strong>Error!</strong>
+            <slot></slot>
+        </div>
+        `
+    })
+    var vm05 = new Vue({
+        el: '#vm05'
+    })
 }
 window.onload = tutorial;
