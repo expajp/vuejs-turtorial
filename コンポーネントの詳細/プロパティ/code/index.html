@@ -2,3 +2,13 @@
 
 <script src='vue.js'></script>
 
+<div id="vm01">
+    <blog-post
+        title="ジョジョの奇妙な冒険"
+        v-bind:likes="42"
+        v-bind:is-published="true"
+        v-bind:comment-ids="[2, 3, 5, 7, 11, 13, 17, 23]"
+        v-bind:author="{ name: '荒木飛呂彦', publisher: '集英社' }"
+    ></blog-post>
+    <blog-post v-bind="samuraix"></blog-post>
+</div>
