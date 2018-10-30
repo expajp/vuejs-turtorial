@@ -24,6 +24,27 @@ var tutorial = function(){
             samuraix: { title: 'るろうに剣心', likes: 28, isPublished: true, CommentIds: [1, 2, 3, 4, 5, 6, 7, 8, 9], author: { name: '和月伸宏', publisher: '集英社' } }
         }
     })
+
+    Vue.component('base-input', {
+        inheritAttrs: false,
+        props: ['label', 'value'],
+        template: `
+            <label>
+                {{ label }}
+                <input 
+                    v-bind= "$attrs"
+                    v-bind:value="value"
+                    v-on:input="$emit('input', $event.target.value)"
+                >
+            </label>
+        `
+    })
+    let vm02 = new Vue({
+        el: '#vm02',
+        data: {
+            username: 'hogehoge'
+        }
+    })
     
 }
 window.onload = tutorial;
