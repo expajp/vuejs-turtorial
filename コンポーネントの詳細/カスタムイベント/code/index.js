@@ -59,5 +59,25 @@ var tutorial = function(){
             value: 'Hello, world!'
         }
     })
+    Vue.component('text-document', {
+        props: ['title', 'body'],
+        template: `
+            <div style="margin-bottom: 20px;">
+                <h3>{{ title }}</h3>
+                <input type="text" v-bind:value="body"/>
+                {{ body }}
+            </div>
+        `
+    })
+    let vm03 = new Vue({
+        el: '#vm03',
+        data: {
+            books: [
+                { title: 'ONE PIECE', body: 'Pirates' },
+                { title: 'NARUTO', body: 'NINJAs' },
+                { title: 'BLEACH', body: 'Deathes' },
+            ]
+        }
+    })
 }
 window.onload = tutorial;
