@@ -12,6 +12,6 @@
 </div>
 
 <div id="vm03">
-    <text-document v-for="book in books" v-bind:title="book.title" v-bind:body.sync="book.body"></text-document>
-    <p v-for="book in books">{{ book.body }}</p>
+    <text-document v-for="book in books" v-bind.sync="book"></text-document>
+    <p v-for="book in books" v-bind:body.sync="book.body">{{ book.body }}</p>
 </div>

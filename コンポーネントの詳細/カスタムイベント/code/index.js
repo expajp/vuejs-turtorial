@@ -60,11 +60,21 @@ var tutorial = function(){
         }
     })
     Vue.component('text-document', {
-        props: ['title', 'body'],
+        inheritAttrs: false, 
+        props: ['title', 'body'], 
+        methods: {
+            emit: function(event){
+                return this.$emit('update:body', event.target.value)
+            },
+        },       
         template: `
             <div style="margin-bottom: 20px;">
                 <h3>{{ title }}</h3>
-                <input type="text" v-bind:value="body"/>
+                <input 
+                    type="text" 
+                    v-bind:value="body" 
+                    v-on:input="emit"
+                />
                 {{ body }}
             </div>
         `
@@ -74,8 +84,7 @@ var tutorial = function(){
         data: {
             books: [
                 { title: 'ONE PIECE', body: 'Pirates' },
-                { title: 'NARUTO', body: 'NINJAs' },
-                { title: 'BLEACH', body: 'Deathes' },
+                { title: 'NARUTO', body: 'Ninjas' },
             ]
         }
     })
