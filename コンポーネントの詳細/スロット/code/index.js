@@ -17,5 +17,17 @@ var tutorial = function(){
     let vm01 = new Vue({
         el: '#vm01'
     })
+    Vue.component('base-layout', {
+        template: `
+        <div class="container">
+        <slot name="header"></slot>
+        <slot></slot>
+        <slot name="footer"></slot>
+        </div>
+        `
+    })
+    let vm02 = new Vue({
+        el: '#vm02'
+    })
 }
 window.onload = tutorial;
