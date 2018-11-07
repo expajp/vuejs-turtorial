@@ -21,3 +21,14 @@
         <hr slot="footer" />
     </base-layout>
 </div>
+
+<div id="vm03">
+    <todo-list v-bind:todos="doraemons">
+    </todo-list>
+    <todo-list v-bind:todos="pokemons">
+        <template slot-scope="slotProps">
+            <span v-if="slotProps.todo.isCompleted">Finished </span>
+            <strong>{{ slotProps.todo.text }}</strong>
+        </template>
+    </todo-list>
+</div>
