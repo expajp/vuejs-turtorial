@@ -69,5 +69,16 @@ var tutorial = function(){
             }
         }
     })
+    Vue.component('async-example', function(resolve){
+        setTimeout(function () {
+            // resolve コールバックにコンポーネント定義を渡します
+            resolve({
+              template: `<div>I am async!</div>`
+            })
+        }, 1000)
+    })
+    let vm02 = new Vue({
+        el: '#vm02'
+    })
 }
 window.onload = tutorial;
