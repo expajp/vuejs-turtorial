@@ -5,5 +5,11 @@ var tutorial = function(){
             show: true
         }
     })
+    let vm02 = new Vue({
+        el: '#vm02',
+        data: {
+            show: true
+        }
+    })
 }
 window.onload = tutorial;
