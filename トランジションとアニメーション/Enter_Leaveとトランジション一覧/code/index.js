@@ -11,5 +11,11 @@ var tutorial = function(){
             show: true
         }
     })
+    let vm03 = new Vue({
+        el: '#vm03',
+        data: {
+            show: true
+        }
+    })
 }
 window.onload = tutorial;
