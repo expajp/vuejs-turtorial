@@ -69,3 +69,16 @@
         * keyframesで細かい設定が可能
 * v-enterは要素の挿入直後には消えないが、animationedイベント時には削除される
 * これも例を見よう
+
+### カスタムトランジションクラス
+* transition要素の属性として、カスタムトランジションクラスを指定できる
+    * なんでわざわざこんなことができるようにしてあるかと言えば、アニメーションライブラリとの併用のため
+    * というわけで、標準では使わないほうが良いです
+* 該当する属性は以下
+    * enter-class
+    * enter-active-class
+    * enter-to-class
+    * leave-class
+    * leave-active-class
+    * leave-to-class
+

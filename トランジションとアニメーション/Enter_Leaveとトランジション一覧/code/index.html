@@ -29,6 +29,7 @@
         100% { transform: scale(1) }
     }
 </style>
+<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
 <script type="text/javascript" src='index.js'></script>
 <script src='vue.js'></script>
 
@@ -54,5 +55,18 @@
     <button @click="show = !show">Toggle show</button>
     <transition name="bounce">
         <p v-if="show">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </transition>
+</div>
+
+<div id="vm04">
+    <button @click="show = !show">
+        Toggle render
+    </button>
+    <transition
+        name="custom-classes-transition"
+        enter-active-class="animated tada"
+        leave-active-class="animated bounceOutRight"
+    >
+        <p v-if="show">hello</p>
     </transition>
 </div>
