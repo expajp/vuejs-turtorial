@@ -68,5 +68,32 @@ var tutorial = function(){
             }
         }
     })
+    let vm07 = new Vue({
+        el: '#vm07',
+        data: {
+          items: [1,2,3,4,5,6,7,8,9]
+        },
+        computed: {
+            nextNum: function(){
+                if(this.items.length == 0){
+                    return 1
+                }
+                else {
+                    return Math.max(...(this.items)) + 1
+                }
+            }
+        },
+        methods: {
+            randomIndex: function(){
+                return Math.floor(Math.random() * this.items.length)
+            },
+            add: function(){
+                this.items.splice(this.randomIndex(), 0, this.nextNum)
+            },
+            remove: function(){
+                this.items.splice(this.randomIndex(), 1)
+            }
+        }
+    })
 }
 window.onload = tutorial;
