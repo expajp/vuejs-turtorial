@@ -48,11 +48,16 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
+    .flip-list-move {
+        transition: transform 1s;
+    }
 </style>
 <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
 <script type="text/javascript" src='index.js'></script>
 <script src='vue.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
 
 <div id="vm01">
     <button v-on:click="show = !show">
@@ -123,4 +128,13 @@
         </span>
     </transition-group>
     <span>{{ nextNum }}</span>
+</div>
+
+<div id="vm08" class="demo">
+    <button v-on:click="shuffle">Shuffle</button>
+    <transition-group name="flip-list" tag="ul">
+        <li v-for="item in items" v-bind:key="item">
+            {{ item }}
+        </li>
+    </transition-group>
 </div>

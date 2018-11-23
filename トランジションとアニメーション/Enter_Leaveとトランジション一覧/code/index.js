@@ -95,5 +95,16 @@ var tutorial = function(){
             }
         }
     })
+    let vm08 = new Vue({
+        el: '#vm08',
+        data: {
+            items: [1,2,3,4,5,6,7,8,9]
+        },
+        methods: {
+            shuffle: function(){
+                this.items = _.shuffle(this.items)
+            }
+        }
+    })
 }
 window.onload = tutorial;
