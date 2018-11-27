@@ -163,3 +163,23 @@
     </transition-group>
     <span>{{ nextNum }}</span>
 </div>
+
+<div id="vm10">
+    <input v-model="query" />
+    <transition-group
+        name="staggered-fade"
+        tag="ul"
+        v-bind:css="false"
+        v-on:before-enter="beforeEnter"
+        v-on:enter="enter"
+        v-on:leave="leave"
+    >
+        <li
+            v-for="(item, index) in computedList"
+            v-bind:key="item.msg"
+            v-bind:data-index="index"
+        >
+            {{ item.msg }}
+        </li>
+    </transition-group>
+</div>
